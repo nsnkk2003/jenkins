@@ -1,39 +1,27 @@
-pipeline 
-{
-agent any
-{
-stages 
-{
-stage('build')
-{
-steps
-{
-echo 'Build'
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Build'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Test'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploy'
+            }
+        }
+        stage('Release') {
+            steps {
+                echo 'Release'
+            }
+        }
+    }
 }
-}
-stage('test')
-{
-steps
-{
-echo 'Test'
-}
-}
-stage('deploy')
-{
-steps
-{
-echo 'Deploy'
-}
-}
-stage('release')
-{
-steps
-{
-echo 'Release'
-}
-}
-}
-}
-
 
 
